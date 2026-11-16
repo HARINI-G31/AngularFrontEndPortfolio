@@ -1,0 +1,130 @@
+
+<section class="experience-section section-padding">
+  <div class="container-custom">
+
+    <div class="experience-heading">
+      <span class="intro-label">MY JOURNEY</span>
+      <h1 class="section-title">{{ heading }}</h1>
+      <p class="section-subtitle">{{ introduction }}</p>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="content-section">
+      <div class="section-heading">
+        <i class="bi bi-briefcase"></i>
+        <h2>Professional Experience</h2>
+      </div>
+
+      <div class="timeline">
+        @for (item of experiences; track item.role) {
+          <article class="timeline-item">
+
+            <div class="timeline-marker"></div>
+
+            <div class="experience-card">
+              <div class="experience-top">
+                <div>
+                  <h3>{{ item.role }}</h3>
+
+                  @if (item.organization) {
+                    <h4>{{ item.organization }}</h4>
+                  }
+                </div>
+
+                <span class="period">{{ item.period }}</span>
+              </div>
+
+              <p class="location">
+                <i class="bi bi-geo-alt"></i>
+                {{ item.location }}
+              </p>
+
+              <ul>
+                @for (point of item.points; track point) {
+                  <li>{{ point }}</li>
+                }
+              </ul>
+            </div>
+
+          </article>
+        }
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="content-section">
+      <div class="section-heading">
+        <i class="bi bi-mortarboard"></i>
+        <h2>Education</h2>
+      </div>
+
+      <div class="education-card">
+        <div class="education-icon">
+          <i class="bi bi-book"></i>
+        </div>
+
+        <div class="education-details">
+          <span class="period">{{ education.period }}</span>
+          <h3>{{ education.degree }}</h3>
+          <h4>{{ education.institution }}</h4>
+
+          <p class="location">
+            <i class="bi bi-geo-alt"></i>
+            {{ education.location }}
+          </p>
+
+          <p class="education-status">{{ education.status }}</p>
+
+          <h5>Relevant Coursework</h5>
+
+          <div class="technology-list">
+            @for (course of education.coursework; track course) {
+              <span class="technology-badge">{{ course }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="content-section">
+      <div class="section-heading">
+        <i class="bi bi-award"></i>
+        <h2>Certifications</h2>
+      </div>
+
+      <div class="certification-grid">
+        @for (cert of certifications; track cert.name) {
+          <div class="certification-card">
+            <div class="certification-icon">
+              <i class="bi bi-patch-check"></i>
+            </div>
+
+            <div>
+              <h3>{{ cert.name }}</h3>
+              <p>{{ cert.provider }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="content-section">
+      <div class="section-heading">
+        <i class="bi bi-translate"></i>
+        <h2>Languages</h2>
+      </div>
+
+      <div class="language-grid">
+        @for (language of languages; track language.name) {
+          <div class="language-card">
+            <h3>{{ language.name }}</h3>
+            <span>{{ language.level }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

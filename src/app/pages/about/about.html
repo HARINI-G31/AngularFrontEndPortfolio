@@ -1,0 +1,152 @@
+
+<section class="about-section section-padding">
+
+  <div class="container-custom">
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+
+      <div class="hero-content">
+
+        <span class="intro-label">
+          HELLO, WELCOME TO MY PORTFOLIO
+        </span>
+
+        <h1>
+          I'm <span>Harini G</span>
+        </h1>
+
+        <h2>
+          Full Stack Developer
+          <span>| Software Engineer</span>
+        </h2>
+
+        <p class="hero-description">
+          {{ description }}
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+
+          <a routerLink="/projects"
+             class="btn-primary-custom">
+            View Projects
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+
+          <a href="/resume/Harini-Resume.pdf"
+             download
+             class="btn-outline-custom">
+            Download CV
+            <i class="bi bi-download"></i>
+          </a>
+
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+
+          <a href="https://github.com/HARINI-G31"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+
+          <a href="https://linkedin.com/in/harini-gunasekarapandian8b5a21296"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a href="mailto:harinimahi31@gmail.com"
+             aria-label="Email">
+            <i class="bi bi-envelope"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Profile Visual -->
+      <div class="hero-visual">
+
+        <div class="profile-card">
+          <div class="profile-initials">HG</div>
+          <h3>Harini G</h3>
+          <p>Developer | Learner | Creator</p>
+          <span class="available">
+            <span></span>
+            Open to Opportunities
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Journey Section -->
+    <div class="journey-section">
+
+      <div class="section-heading">
+        <span class="intro-label">MY PATH</span>
+        <h2 class="section-title">My Journey</h2>
+        <p class="section-subtitle">
+          A continuous journey of learning, building and growing.
+        </p>
+      </div>
+
+      <div class="journey-grid">
+
+        @for (item of journey; track item.year) {
+
+          <div class="journey-card">
+
+            <span class="journey-year">
+              {{ item.year }}
+            </span>
+
+            <h3>{{ item.title }}</h3>
+
+            <p>{{ item.description }}</p>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+    <!-- Strengths Section -->
+    <div class="strength-section">
+
+      <div class="section-heading">
+        <span class="intro-label">WHAT DEFINES ME</span>
+        <h2 class="section-title">My Strengths</h2>
+      </div>
+
+      <div class="strength-grid">
+
+        @for (item of strengths; track item.title) {
+
+          <div class="strength-card">
+
+            <i [class]="item.icon"></i>
+
+            <h3>{{ item.title }}</h3>
+
+            <p>{{ item.description }}</p>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

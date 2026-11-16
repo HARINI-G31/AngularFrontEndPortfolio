@@ -1,0 +1,73 @@
+
+<section class="skills-section section-padding">
+
+  <div class="container-custom">
+
+    <!-- Page Heading -->
+    <div class="skills-heading">
+
+      <span class="intro-label">MY EXPERTISE</span>
+
+      <h1 class="section-title">
+        {{ heading }}
+      </h1>
+
+      <p class="section-subtitle">
+        {{ introduction }}
+      </p>
+
+    </div>
+
+    <!-- Skills Cards -->
+    <div class="skills-grid">
+
+      @for (category of skillCategories; track category.title) {
+
+        <div class="skill-card">
+
+          <!-- Card Icon -->
+          <div class="skill-icon">
+            <i [class]="category.icon"></i>
+          </div>
+
+          <!-- Card Information -->
+          <h2>{{ category.title }}</h2>
+
+          <p class="skill-description">
+            {{ category.description }}
+          </p>
+
+          <!-- Technology Badges -->
+          <div class="technology-list">
+
+            @for (technology of category.technologies; track technology) {
+
+              <span class="technology-badge">
+                {{ technology }}
+              </span>
+
+            }
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+    <!-- Bottom Note -->
+    <div class="skills-footer">
+
+      <i class="bi bi-lightbulb"></i>
+
+      <p>
+        Always learning, experimenting and exploring
+        new technologies to improve my development skills.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>

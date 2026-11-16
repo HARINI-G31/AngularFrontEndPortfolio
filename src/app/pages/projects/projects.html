@@ -1,0 +1,56 @@
+
+<section class="projects-section section-padding">
+  <div class="container-custom">
+
+    <div class="projects-heading">
+      <span class="intro-label">MY WORK</span>
+      <h1 class="section-title">{{ heading }}</h1>
+      <p class="section-subtitle">{{ introduction }}</p>
+    </div>
+
+    <div class="projects-grid">
+
+      @for (project of projectList; track project.title) {
+        <article class="project-card">
+
+          <div class="project-visual">
+            <i [class]="project.icon"></i>
+            <span>{{ project.title }}</span>
+          </div>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <span>{{ project.category }}</span>
+              <small>{{ project.date }}</small>
+            </div>
+
+            <h2>{{ project.title }}</h2>
+
+            <p class="project-description">
+              {{ project.description }}
+            </p>
+
+            <div class="technology-list">
+              @for (technology of project.technologies; track technology) {
+                <span class="technology-badge">
+                  {{ technology }}
+                </span>
+              }
+            </div>
+
+            @if (project.liveUrl) {
+              <div class="project-links">
+                <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">
+                  Live Demo <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            }
+
+          </div>
+        </article>
+      }
+
+    </div>
+  </div>
+</section>

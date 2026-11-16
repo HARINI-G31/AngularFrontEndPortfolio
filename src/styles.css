@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0F172A;
+  color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+/* Theme Colors */
+:root {
+  --primary-bg: #0F172A;
+  --secondary-bg: #172554;
+  --card-bg: #1E293B;
+  --primary-blue: #2563EB;
+  --accent-blue: #38BDF8;
+  --primary-text: #F8FAFC;
+  --secondary-text: #94A3B8;
+  --border-color: #334155;
+}
+
+/* Common Container */
+.container-custom {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Common Section */
+.section-padding {
+  padding: 90px 0;
+}
+
+/* Common Heading */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  color: var(--secondary-text);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  display: inline-block;
+  padding: 13px 25px;
+  background: var(--primary-blue);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  background: #1D4ED8;
+  transform: translateY(-3px);
+}
+
+.btn-outline-custom {
+  display: inline-block;
+  padding: 13px 25px;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+  background: var(--accent-blue);
+  color: #0F172A;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
